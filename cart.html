@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السلة - مطعم ويمبي</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cart-page { margin-top: 90px; padding: 30px 0; }
+    .cart-wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    .cart-row { display: grid; grid-template-columns: 70px 1fr auto auto auto; gap: 12px; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
+    .cart-row .thumb { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; }
+    .cart-row .info .name { font-weight: 700; color: #2c5530; }
+    .cart-row .price { color: #1e3a21; font-weight: 700; }
+    .cart-row .qty { display: flex; align-items: center; gap: 8px; }
+    .cart-row .qty button { width: 32px; height: 32px; border:1px solid #2c5530; background:#fff; color:#2c5530; border-radius:6px; }
+    .cart-row .line-total { font-weight: 700; }
+    .cart-row .remove { background: transparent; border: none; color:#a00; font-size: 20px; cursor: pointer; }
+    .summary { background:#f9f9f9; padding: 16px; border-radius: 12px; position: sticky; top: 100px; }
+    .summary h3 { margin-bottom: 12px; color:#2c5530; }
+    .summary .row { display:flex; justify-content:space-between; margin: 8px 0; }
+    .summary .total { font-weight: 800; color:#1e3a21; }
+    .form { margin-top: 20px; display: grid; gap: 10px; }
+    .form input, .form textarea { padding: 10px; border-radius: 8px; border:1px solid #ddd; font-family: inherit; }
+    .submit { width: 100%; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <img src="images/logo.png" alt="مطعم ويمبي" class="logo">
+          <h1 class="brand-name">مطعم ويمبي</h1>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="menu.html" class="nav-link">المنيو</a></li>
+          <li><a href="cart.html" class="nav-link active">السلة</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <div class="container cart-wrap">
+      <section>
+        <h2 class="section-title">السلة</h2>
+        <div id="cart-items"></div>
+      </section>
+      <aside class="summary">
+        <h3>الملخص</h3>
+        <table>
+          <tr>
+            <td>المجموع الفرعي</td>
+            <td id="subtotal">0.00 جنيه</td>
+          </tr>
+          <tr>
+            <td>رسوم التوصيل</td>
+            <td id="delivery-fee">0.00 جنيه</td>
+          </tr>
+          <tr>
+            <td>الإجمالي الكلي</td>
+            <td id="grand">0.00 جنيه</td>
+          </tr>
+        </table>
+        <div class="form">
+          <input id="cust-name" placeholder="الاسم"/>
+          <input id="cust-phone" placeholder="الهاتف"/>
+          <input id="cust-address" placeholder="العنوان"/>
+          <textarea id="cust-notes" placeholder="ملاحظات" rows="3"></textarea>
+        </div>
+        <button id="submit-order" class="btn btn-primary submit">إرسال الطلب</button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 مطعم ويمبي. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

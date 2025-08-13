@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنيو - مطعم ويمبي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="مطعم ويمبي" class="logo">
+                    <h1 class="brand-name">مطعم ويمبي</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="menu.html" class="nav-link active">المنيو</a></li>
+                    <li><a href="cart.html" class="nav-link">السلة (<span id="cart-count">0</span>)</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1 class="page-title">منيو مطعم ويمبي</h1>
+            <p class="page-subtitle">اختر من تشكيلتنا الواسعة من الأطباق الشهية</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories Navigation -->
+    <section class="menu-nav">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="dishes">الأطباق</button>
+                <button class="tab-btn" data-category="sandwiches">السندوتشات</button>
+                <button class="tab-btn" data-category="drinks">المشروبات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <main class="menu-content">
+        <div class="container">
+            <!-- Dishes Section -->
+            <section id="dishes" class="menu-section active">
+                <h2 class="section-title">الأطباق</h2>
+                <div class="menu-grid" id="dishes-grid">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Sandwiches Section -->
+            <section id="sandwiches" class="menu-section">
+                <h2 class="section-title">السندوتشات</h2>
+                <div class="menu-grid" id="sandwiches-grid">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Drinks Section -->
+            <section id="drinks" class="menu-section">
+                <h2 class="section-title">المشروبات</h2>
+                <div class="menu-grid" id="drinks-grid">
+                    <!-- Items will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Cart Summary (Fixed Bottom) -->
+    <div class="cart-summary" id="cart-summary" style="display: none;">
+        <div class="container">
+            <div class="cart-info">
+                <span class="cart-items-count">0 عنصر</span>
+                <span class="cart-total">0 جنيه</span>
+            </div>
+            <a href="cart.html" class="btn btn-primary">عرض السلة</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="مطعم ويمبي" class="footer-logo">
+                    <h3>مطعم ويمبي</h3>
+                    <p>أفضل فول وفلافل في المدينة</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="menu.html">المنيو</a></li>
+                        <li><a href="cart.html">السلة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <p>📞 01234567890</p>
+                    <p>📍 شارع الجمهورية، وسط البلد</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مطعم ويمبي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+    {
+      "id": "drink1",
+      "image": "images/drinks/pepsi.jpg",
+      "title": "بيبسي",
+      "description": "مشروب بيبسي كانز ساقع",
+      "price": "15"
+    },
+    {
+      "id": "drink2",
+      "image": "images/drinks/VCOLA.webp",
+      "title": "في كولا",
+      "description": "في كولا كانز ساقع",
+      "price": "20"
+    },
+    {
+      "id": "drink3",
+      "image": "images/drinks/orange-mirinda.jpg",
+      "title": "ميرندا برتقال",
+      "description": "ميرندا برتقال كانز ساقع",
+      "price": "15" 
+    },
+    {
+      "id": "drink4",
+      "image": "images/drinks/7up.jpg",
+      "title": "سفن اب",
+      "description": "سفن اب كانز ساقع",
+      "price": "15"
+    },
+    {
+      "id": "drink5",
+      "image": "images/drinks/water.webp",
+      "title": "مياه معدنية",
+      "description": "زجاجة مياه معدنية",
+      "price": "10"
+    }
+  ]
