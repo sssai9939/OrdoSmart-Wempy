@@ -110,11 +110,12 @@ def format_order_docx(order: OrderRequest, order_id: int, filepath: str):
     customer_table.style = 'Table Grid'
     # Data on the left, labels on the right
     set_cell_text(customer_table.cell(0, 0), order.customer.name)
-    set_cell_text(customer_table.cell(0, 1), "الاسم:", bold=True)
+    set_cell_text(customer_table.cell(0, 1), "الاسم", bold=True)
     set_cell_text(customer_table.cell(1, 0), order.customer.phone)
-    set_cell_text(customer_table.cell(1, 1), "الهاتف:", bold=True)
+    set_cell_text(customer_table.cell(1, 1), "الهاتف", bold=True)
     set_cell_text(customer_table.cell(2, 0), order.customer.address)
-    set_cell_text(customer_table.cell(2, 1), "العنوان:", bold=True)
+    set_cell_text(customer_table.cell(2, 1), "العنوان", bold=True)
+    doc.add_paragraph()
 
     # --- Order Items ---
     doc.add_paragraph().add_run("تفاصيل الطلب").bold = True
@@ -145,16 +146,19 @@ def format_order_docx(order: OrderRequest, order_id: int, filepath: str):
         set_cell_text(row_cells[2], str(item.qty))
         set_cell_text(row_cells[3], item.name)
 
+    doc.add_paragraph()
+    
     # --- Totals ---
     doc.add_paragraph().add_run("الحساب").bold = True
     totals_table = doc.add_table(rows=3, cols=2)
     totals_table.style = 'Table Grid'
     set_cell_text(totals_table.cell(0, 0), f"{order.totals.subtotal:.2f} ج.م")
-    set_cell_text(totals_table.cell(0, 1), "المجموع الفرعي:", bold=True)
+    set_cell_text(totals_table.cell(0, 1), "المجموع الفرعي", bold=True)
     set_cell_text(totals_table.cell(1, 0), f"{order.totals.delivery:.2f} ج.م")
-    set_cell_text(totals_table.cell(1, 1), "رسوم التوصيل:", bold=True)
+    set_cell_text(totals_table.cell(1, 1), "رسوم التوصيل", bold=True)
     set_cell_text(totals_table.cell(2, 0), f"{order.totals.total:.2f} ج.م", bold=True)
-    set_cell_text(totals_table.cell(2, 1), "الإجمالي النهائي:", bold=True)
+    set_cell_text(totals_table.cell(2, 1), "الإجمالي النهائي", bold=True)
+    doc.add_paragraph()
 
     # --- Notes ---
     if order.customer.notes:
@@ -162,6 +166,7 @@ def format_order_docx(order: OrderRequest, order_id: int, filepath: str):
         notes_table = doc.add_table(rows=1, cols=1)
         notes_table.style = 'Table Grid'
         set_cell_text(notes_table.cell(0, 0), order.customer.notes, align='left')
+        doc.add_paragraph()
 
     doc.save(filepath)
 
