@@ -58,7 +58,7 @@
   {
     "id": "sandwich8",
     "image": "images/sandwiches/omelette.jpg",
-    "title": "ساندويتش الأومليت",
+    "title": "ساندويتش أومليت",
     "description": "ساندويتش بيض الأومليت.",
     "price": "20",
     "type": ["شامي", "بلدي"]

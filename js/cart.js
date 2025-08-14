@@ -105,7 +105,7 @@ async function submitOrder(){
   };
 
   try {
-    const response = await fetch('http://127.0.0.1:5000/submit_order', {
+    const response = await fetch('http://127.0.0.1:8000/submit_order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -113,7 +113,7 @@ async function submitOrder(){
 
     const result = await response.json();
     if (!response.ok) {
-      throw new Error(result.detail || 'فشل إرسال الطلب');
+      throw new Error(result.detail || 'إرسال الطلب');
     }
 
     alert(`تم إرسال الطلب بنجاح! رقم الطلب: ${result.order_id}`);
@@ -122,7 +122,7 @@ async function submitOrder(){
 
   } catch (error) {
     console.error('Error submitting order:', error);
-    alert(`حدث خطأ: ${error.message}\nيرجى التأكد من أن الخادم يعمل بشكل صحيح.`);
+    alert(`---- : ${error.message}\nيرجى التأكد من أن الخادم يعمل بشكل صحيح.`);
   }
 }
 
