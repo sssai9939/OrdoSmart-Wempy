@@ -1,21 +1,27 @@
+import sys
+import os
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from schemas import OrderRequest
-from services import (
+# Add backend directory to sys.path to allow imports from root
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from helpers.order_models import OrderRequest, OrderItem, Customer, Totals
+from order_processing import (
     get_next_order_id,
     build_order_docx_path,
     format_order_docx,
     print_file,
 )
+from enums.order_messages import ResponseMessages
 
 # Project root (directory that contains index.html, css/, js/, images/, orders/)
 ROOT = Path(__file__).resolve().parent.parent
 
-app = FastAPI(title="Wempy Order & Print Server")
+app = FastAPI(title=ResponseMessages.RESTAURANT_TITLE.value)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -37,7 +43,7 @@ if (ROOT / "images").exists():
 def serve_index():
     index = ROOT / "index.html"
     if not index.exists():
-        return {"message": "Wempy Order Service Ready"}
+        return {"message": ResponseMessages.HTML_SERVER_SUCCESS.value}
     return FileResponse(str(index))
 
 @app.get("/menu")
@@ -48,7 +54,7 @@ def serve_menu():
 def serve_cart():
     return FileResponse(str(ROOT / "cart.html"))
 
-# --- API Endpoints (unchanged paths) ---
+# --- API Endpoints ---
 @app.post("/submit_order")
 def submit_order(order: OrderRequest):
     try:
@@ -60,8 +66,8 @@ def submit_order(order: OrderRequest):
 
         return {"success": True, "order_id": order_id, "file_path": str(docx_path)}
     except Exception as e:
-        print(f"Error processing order: {e}")
-        raise HTTPException(status_code=500, detail=f"Error processing order: {e}")
+        print(f"{ResponseMessages.PROCESSING_ORDER_FAILED.value} : {e}")
+        raise HTTPException(status_code=500, detail=f"{ResponseMessages.PROCESSING_ORDER_FAILED.value} : {e}")
 
 @app.get("/print_order/{order_id}")
 def reprint_order(order_id: int):
@@ -73,6 +79,3 @@ def reprint_order(order_id: int):
         return {"success": True, "message": f"Order {order_id} sent to printer."}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Could not print order {order_id}: {e}")
-
-
-# Note: Run with `uvicorn app.main:app --reload` locally

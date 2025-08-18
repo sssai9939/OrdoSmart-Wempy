@@ -1,54 +1,13 @@
 # Wempy Restaurant Website
 
-موقع تجريبي لمطعم فول وفلافل (Wempy) مع واجهة عربية RTL ونظام سلة وباكند بسيط لاستقبال الطلبات.
+Wempy is a demo web application for a traditional Egyptian restaurant. It offers a modern, user-friendly interface in Arabic (RTL), allowing customers to:
 
-## هيكل المشروع
-- `index.html` الصفحة الرئيسية
-- `menu.html` صفحة المنيو (تحميل ديناميكي من JSON)
-- `cart.html` صفحة السلة وإرسال الطلب
-- `css/` ملفات التنسيق (style.css, menu.css)
-- `js/` سكربتات الواجهة (script.js, menu.js, cart.js)
-- `data/` بيانات المنيو (`Dishes.json`, `Sandwiches.json`, `Drinks.json`)
-- `images/` صور اللوجو/البانر وصور المنتجات
-- `orders/` يتم حفظ الطلبات فيها تلقائياً
-- `order_server.py` باكند FastAPI يستقبل الطلبات ويحفظها
-- `requirements.txt` متطلبات الباكند
+- Browse a digital food and drinks menu
+- Add items to a shopping cart
+- Review and edit their order
+- Submit their order online for processing
 
-## تشغيل الباكند محلياً (FastAPI + Uvicorn)
-1. تثبيت المتطلبات (مستحسن استخدام بيئة افتراضية):
-   - Windows PowerShell:
-     ```powershell
-     py -m venv .venv
-     .venv\Scripts\Activate.ps1
-     pip install -r requirements.txt
-     ```
-2. تشغيل السيرفر (Uvicorn):
-   ```powershell
-   uvicorn order_server:app --host 127.0.0.1 --port 5000 --reload
-   ```
-   أو:
-   ```powershell
-   py order_server.py
-   ```
-   العنوان: `http://127.0.0.1:5000` (اختبار الصحة: `GET /health`).
-
-## تجربة الواجهة
-- افتح `index.html` مباشرة في المتصفح، أو `menu.html` لإضافة عناصر إلى السلة.
-- من `menu.html`:
-  - أزرار +/- لضبط الكمية (تبدأ من 0).
-  - زر "أضف للسلة" يضيف العناصر إلى LocalStorage بمفتاح `wempyCart`.
-- من `cart.html`:
-  - تعديل الكميات/الحذف وحساب الإجمالي تلقائياً.
-  - إدخال بيانات العميل والضغط على "إرسال الطلب" لإرسال POST إلى `http://127.0.0.1:5000/order`.
-  - سيتم حفظ الطلب داخل `orders/` كملف JSON + TXT وسيُطبع في الـ Console.
-
-## ملاحظات
-- حقول الأسعار في JSON قد تكون بنطاقات مثل `15-20` للسندوتشات؛ الواجهة تأخذ الحد الأدنى كسعر افتراضي للطلب السريع.
-- صور السندوتشات: إذا لم تكن متوفرة بعد، قد تظهر مساحة فارغة للصورة. يمكنك إضافة صور لاحقاً تحت `images/sandwiches/` أو تعديل مسارات الصور داخل JSON.
-- يمكن تعديل العملة/الرسوم لاحقاً في الواجهة أو عند بناء الطلب.
-
-## تخصيصات لاحقة مقترحة
-- دعم أحجام/خيارات متعددة لكل صنف (size/options) قبل الإضافة للسلة.
-- رسوم توصيل ومناطق وتسعير ديناميكي.
-- زر "العودة للمنيو" في السلة.
-- نشر الواجهة على استضافة ثابتة.
+The project includes a simple backend that receives and stores customer orders. Wempy is ideal as a starting point for anyone building an online ordering system for local restaurants, with support for Arabic language and right-to-left layouts.
+- Price fields in JSON may be ranges like `15-20` for sandwiches; the UI uses the minimum price as the default for quick ordering.
+- Sandwich images: If not available yet, an empty image space may appear. You can add images later under `images/sandwiches/` or update image paths in the JSON files.
+- Currency/fees can be adjusted later in the UI or when building the order.

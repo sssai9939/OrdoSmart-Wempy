@@ -1,0 +1,195 @@
+[
+    {
+      "id": "dish1",
+      "image": "images/Dishes/foul-plain.webp",
+      "title": "فول سادة",
+      "description": "علبة فول سادة.",
+      "size": [
+        { "name": "كبيرة", "price": 25 },
+        { "name": "صغيرة", "price": 20 }
+      ]
+    },
+    {
+      "id": "dish2",
+      "image": "images/Dishes/foul-mashed.jpg",
+      "title": "فول محوج ",
+      "description": "علبة فول محوج مهروس.",
+      "size": [
+        { "name": "كبيرة", "price": 25 },
+        { "name": "صغيرة", "price": 20 }
+      ]
+    },
+    {
+      "id": "dish3",
+      "image": "images/Dishes/foul-ghee.jpg",
+      "title": "فول بالسمن",
+      "description": "علبة فول بالسمن.",
+      "size": [
+        { "name": "كبيرة", "price": 30 },
+        { "name": "صغيرة", "price": 25 }
+      ]
+    },
+    {
+      "id": "dish4",
+      "image": "images/Dishes/foul-iskandarani.png",
+      "title": "فول اسكندراني",
+      "description": "علبة فول اسكندراني.",
+      "size": [
+        { "name": "كبيرة", "price": 30 },
+        { "name": "صغيرة", "price": 25 }
+      ]
+    },
+    {
+      "id": "dish5",
+      "image": "images/Dishes/foul-salad.jpeg",
+      "title": "فول بالصلصة",
+      "description": "علبة فول بالصلصة.",
+      "size": [
+        { "name": "كبيرة", "price": 30 },
+        { "name": "صغيرة", "price": 25 }
+      ]
+    },
+    {
+      "id": "dish6",
+      "image": "images/Dishes/foul-boiled-egg.jpg",
+      "title": "فول بالبيض المسلوق",
+      "description": "علبة فول بالبيض المسلوق.",
+      "size": [
+        { "name": "كبيرة", "price": 30 },
+        { "name": "صغيرة", "price": 25 }
+      ]
+    },
+    {
+      "id": "dish7",
+      "image": "images/Dishes/foul-olive-oil.jpg",
+      "title": "فول بزيت الزيتون",
+      "description": "علبة فول بزيت الزيتون.",
+      "size": [
+        { "name": "كبيرة", "price": 35 },
+        { "name": "صغيرة", "price": 30 }
+      ]
+    },
+
+    {
+      "id": "dish8",
+      "image": "images/Dishes/tameya-paste.jpg",
+      "title": "عجينة طعمية",
+      "description": "طبق عجينة طعمية.",
+      "price": "15"
+    },
+
+    {
+      "id": "dish9",
+      "image": "images/Dishes/tameya-pieces.jpg",
+      "title": "قرص طعمية",
+      "description": "طبق قرص طعمية.",
+      "price": "2"
+    },
+
+    {
+        "id": "dish10",
+        "image": "images/Dishes/tameya-pieces-large.jpg",
+        "title": "قرص طعمية كبيرة",
+        "description": "قرص طعمية كبيرة.",
+        "price": "4"
+    },
+
+    {
+        "id": "dish11",
+        "image": "images/Dishes/tameya-pieces-filled.jpg",
+        "title": "قرص طعمية محشية",
+        "description": "قرص طعمية محشية.",
+        "price": "5"
+    },
+
+    {
+        "id": "dish12",
+        "image": "images/Dishes/Kiri falafel.jpeg",
+        "title": "طعمية كيري",
+        "description": "طبق طعمية كيري.",
+        "price": "20"
+    },
+
+    {
+        "id": "dish13",
+        "image": "images/Dishes/Fried eggplant.webp",
+        "title": "باذنجان مقلي",
+        "description": "طبق باذنجان مقلي.",
+        "price": "10"
+    },
+
+    {
+        "id": "dish14",
+        "image": "images/Dishes/pickle eggplant.jpg",
+        "title": "باذنجان مخلل",
+        "description": "طبق باذنجان مخلل.",
+        "price": "10"
+    },
+
+    {
+      "id": "dish15",
+      "image": "images/Dishes/french-fries.webp",
+      "title": "بطاطس صوابع",
+      "description": "طبق بطاطس صوابع.",
+      "price": "15"
+    },
+
+    {
+      "id": "dish16",
+      "image": "images/Dishes/jambri.jpeg",
+      "title": "بطاطس جمبري",
+      "description": "طبق بطاطس جمبري.",
+      "price": "15"
+    },
+    {
+      "id": "dish17",
+      "image": "images/Dishes/Grilled Potatoes.jpg",
+      "title": "بطاطس مهروسة",
+      "description": "طبق بطاطس مهروسة.",
+      "price": "15"
+    },
+    {
+      "id": "dish18",
+      "image": "images/Dishes/chipsy.jpg",
+      "title": "شيبسي",
+      "description": "طبق شيبسي.",
+      "price": "15"
+    },
+    {
+      "id": "dish19",
+      "image": "images/Dishes/baba-ghanoush.jpg",
+      "title": "بابا غنوج",
+      "description": "طبق بابا غنوج.",
+      "price": "15"
+    },
+    {
+      "id": "dish20",
+      "image": "images/Dishes/cheese.jpg",
+      "title": "جبنة",
+      "description": "طبق جبنة.",
+      "price": "15"
+    },
+    {
+      "id": "dish21",
+      "image": "images/Dishes/moussaka.jpg",
+      "title": "مسقعة",
+      "description": "طبق مسقعة.",
+      "price": "15"
+    },
+    {
+      "id": "dish22",
+      "image": "images/Dishes/Eggs with pastrami.jpg",
+      "title": "بيض بالبسطرمة",
+      "description": "طبق بيض بالبسطرمة.",
+      "price": "30"
+    },
+    {
+      "id": "dish23",
+      "image": "images/Dishes/shakshouka.jpg",
+      "title": "شكشوكة",
+      "description": "طبق شكشوكة.",
+      "price": "15"
+    }
+
+  ]
+  

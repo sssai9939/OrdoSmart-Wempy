@@ -1,0 +1,188 @@
+[
+  {
+    "id": "sandwich1",
+    "image": "images/sandwiches/ful.webp",
+    "title": "ساندويتش فول",
+    "description": "ساندويتش فول.",
+    "price": "10",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich2",
+    "image": "images/sandwiches/tameya.jpeg",
+    "title": "ساندويتش طعمية",
+    "description": "ساندويتش طعمية.",
+    "price": "10",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich3",
+    "image": "images/sandwiches/ful-on-tameya.webp",
+    "title": "ساندويتش فول على طعمية",
+    "description": "ساندويتش فول على طعمية.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich4",
+    "image": "images/sandwiches/ful-ghee.jpg",
+    "title": "ساندويتش فول بالسمنة",
+    "description": "ساندويتش فول بالسمنة.",
+    "price": "15",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich5",
+    "image": "images/sandwiches/ful-salad.jpg",
+    "title": "ساندويتش فول بالصلصة",
+    "description": "ساندويتش فول بالصلصة.",
+    "price": "15",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich6",
+    "image": "images/sandwiches/ful-egg.jpg",
+    "title": "ساندويتش فول بالبيض",
+    "description": "ساندويتش فول بالبيض.",
+    "price": "18",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich7",
+    "image": "images/sandwiches/tameya-egg.webp",
+    "title": "ساندويتش طعمية بالبيض ",
+    "description": "ساندويتش طعمية بالبيض المسلوق.",
+    "price": "18",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich8",
+    "image": "images/sandwiches/omelette.jpg",
+    "title": "ساندويتش أومليت",
+    "description": "ساندويتش بيض الأومليت.",
+    "price": "20",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich9",
+    "image": "images/sandwiches/shakshouka.jpeg",
+    "title": "ساندويتش شكشوكة",
+    "description": "ساندويتش شكشوكة.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich10",
+    "image": "images/sandwiches/moussaka.webp",
+    "title": "ساندويتش مسقعة",
+    "description": "ساندويتش مسقعة.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich11",
+    "image": "images/sandwiches/baba-ghanoush.webp",
+    "title": "ساندويتش بابا غنوج",
+    "description": "ساندويتش بابا غنوج.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich12",
+    "image": "images/sandwiches/cheese.avif",
+    "title": "ساندويتش جبنة",
+    "description": "ساندويتش جبنة.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich13",
+    "image": "images/sandwiches/french-fries-sticks.webp",
+    "title": "ساندويتش صوابع",
+    "description": "ساندويتش بطاطس صوابع.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+
+  {
+    "id": "sandwich14",
+    "image": "images/sandwiches/french-fries-ketchup-mayo.jpeg",
+    "title": "ساندويتش بطاطس كاتشب مايونيز",
+    "description": "ساندويتش بطاطس كاتشب و مايونيز.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich15",
+    "image": "images/sandwiches/jambri.jpg",
+    "title": "ساندويتش جمبري",
+    "description": "ساندويتش جمبري.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich16",
+    "image": "images/sandwiches/mashed-potatoes.jpg",
+    "title": "ساندويتش مهروسة",
+    "description": "ساندويتش مهروسة.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich17",
+    "image": "images/sandwiches/chipsy.jpeg",
+    "title": "ساندويتش شيبسي",
+    "description": "ساندويتش شيبسي.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich18",
+    "image": "images/sandwiches/fries-cheddar.jpg",
+    "title": "ساندويتش الشيدر",
+    "description": "ساندويتش الشيدر.",
+    "price": "25",
+    "type": ["شامي", "بلدي"]
+  },
+
+  {
+    "id": "sandwich19",
+    "image": "images/sandwiches/fries-egg.jpg",
+    "title": "ساندويتش ميكس مع بيض",
+    "description": "ساندويتش ميكس مع بيض - حددالميكس في الملاحظات",
+    "price": "18",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich20",
+    "image": "images/sandwiches/fried-eggplant.jpg",
+    "title": "ساندويتش باذنجان مقلي",
+    "description": "ساندويتش باذنجان مقلي.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich21",
+    "image": "images/sandwiches/mix.jpg",
+    "title": "ساندوتش مكس 2 صنف",
+    "description": "ساندويتش مكس يحتوي على 2 صنف - حدد الميكس في الملاحظات",
+    "price": "15-20",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich22",
+    "image": "images/sandwiches/mix.jpg",
+    "title": "ساندويتش مكس 3 صنف",
+    "description": "ساندويتش مكس يحتوي على 3 صنف - حدد الميكس في الملاحظات",
+    "price": "20-25",
+    "type": ["شامي", "بلدي"]
+  },
+  {
+    "id": "sandwich23",
+    "image": "images/sandwiches/boiled-egg.jpg",
+    "title": "ساندويتش بيض مسلوق",
+    "description": "ساندويتش بيض مسلوق.",
+    "price": "12",
+    "type": ["شامي", "بلدي"]
+  }
+]
